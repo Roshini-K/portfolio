@@ -1,0 +1,33 @@
+---
+const publications = [
+  {
+    title: "IEEE Publication",
+    description: "Co-authored “Comparative Analysis of Algorithms for Recognizing Emotions by Eye Blink” [IEEE Xplore, Jan. 2022] International Conference for Advancement in Technology (ICONAT), 2022",
+    link: "https://ieeexplore.ieee.org/document/9725875"
+  },
+  {
+    title: "IRAJ Publication",
+    description: "Co-authored “Implementation of Eye Aspect Ratio Algorithm for Recognizing Emotions by Eye Blink” [IEEE Xplore, Jul. 2022] Institute of Research and Journals (IRAJ), 2022",
+    link: "https://www.iraj.in/journal/journal_file/journal_pdf/3-844-166539394359-63.pdf"
+  }
+];
+---
+<section class="py-20 px-4 bg-gray-50" id="publications">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Publications</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      {publications.map((pub) => (
+        <a 
+          href={pub.link} 
+          target="_blank" 
+          class="block p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up"
+        >
+          <h3 class="text-xl font-semibold mb-3">{pub.title}</h3>
+          <p class="text-gray-600">{pub.description}</p>
+          <div class="mt-4 text-apple-blue">Read More →</div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

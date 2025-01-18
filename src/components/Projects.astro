@@ -1,0 +1,55 @@
+---
+const projects = [
+  {
+    title: "Maverick Health App",
+    date: "Sept. 2024 - Dec. 2024",
+    description: "Engineered and developed backend for a health platform app to deliver personalized care pathways for 1100 active users per month. The app empowers users with real-time health data tracking, educational resources & personalized care recommendations",
+    tech: ["Node.js", "PostgreSQL", "AWS"],
+    link: "https://github.com/maverick611/maverickApp/tree/feature_questions"
+  },
+  {
+    title: "Optimizing Text Summarization with Deep Learning models ",
+    date: "May 2024 - Jul. 2024",
+    description: "Built a Python Flask UI for text summarization using advanced DL models: Google T5, Facebook BART, and BERT2BERT. Finetuned and evaluated models’ performance using ROUGE & BERT scores achieved 97% accuracy in BERT2BERT model",
+    tech: ["Python-Flask", "HuggingFace", "LLMs"],
+    link: "https://github.com/Roshini-K/Text-Summarization"
+  },
+  {
+    title: "Power plant DB",
+    date: "Mar. 2024 - Apr. 2024",
+    description: "Developed a UI leveraging real-time database detailing electricity generation plant locations, state-wise utilities, emissions and sales, enabling profit estimation & predictive analysis for investors/customers, ultimately reducing search time by 25%",
+    tech: ["Python-Flask", "HTML", "PostgreSQL"],
+    link: "https://github.com/Roshini-K/Power-generation"
+  },
+  {
+    title: " BLYNK: Emotion Recognizer",
+    date: "May. 2021 - Apr. 2022",
+    description: "Enhanced an emotion recognition system using the Eye Aspect Ratio (EAR) algorithm boosting detection accuracy by 15% for stress, focus, drowsiness, and excitement based on real-time eye blink frequency and patterns",
+    tech: ["Python", "Computer Vision"],
+    link: "https://github.com/Roshini-K/Blynk_emotion_recognizer"
+  }
+];
+---
+<section class="py-20 px-4" id="projects">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      {projects.map((project) => (
+        <div 
+          class="p-6 bg-gray-50 rounded-2xl"
+          data-aos="fade-up"
+        >
+          <h3 class="text-xl font-semibold mb-3">{project.title}</h3>
+          <p class="text-sm text-gray-500 mb-3">{project.date}</p>
+          <p class="text-gray-600 mb-4">{project.description}</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            {project.tech.map((tech) => (
+              <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">{tech}</span>
+            ))}
+          </div>
+          <a href={project.link} class="text-apple-blue hover:underline">View Project →</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

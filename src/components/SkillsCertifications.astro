@@ -1,0 +1,242 @@
+---
+const skillCategories = {
+  "Languages & Frameworks": ["C", "Java", "Python", "C#", "R", "HTML", "CSS", "MySQL/PostgreSQL","Flask", "Node JS", ".NET", "JUnit", "Cerner Command Language"],
+  tools: ["Git", "JIRA", "Postman", "AWS", "Jenkins", "Figma", "Fortify", "Unix Shell Scripting", "Hadoop", "Spark"],
+  "AI/ML domain": ["Computer Vision", "Machine Learning", "Deep Learning", "Large Language Models", "Big Data"]
+};
+
+const certifications = [
+  {
+    title: "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
+    date: "Jul. 2024",
+    description: "Gain understanding of Machine Learning and Deep Learning concepts in Python, Large Language Models (LLMs), Retrieval-Augmented Generation, Semantic Search, Vector database, LangChain, to build, trace, evaluate, and deploy LLM applications."
+  },
+  {
+    title: "Career Essentials in Generative AI by Microsoft and LinkedIn",
+    date: "Aug. 2024",
+    description: "Completed foundational concepts in Generative AI, including large language models, prompt engineering, and responsible AI practices. Gained hands-on experience with industry AI tools while learning to implement ethical AI solutions"
+  },
+  {
+    title: "Python Foundations - Udemy",
+    date: "Aug. 2024",
+    description: "Completed an intensive Python fundamentals course covering core programming concepts and best practices through hands-on exercises and practical examples. Mastered essential Python syntax, data structures, control flow, and problem-solving techniques"
+  }
+];
+---
+
+<section class="py-20 px-4 bg-gray-50" id="skills">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
+      Skills & Certifications
+    </h2>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Skills Section -->
+      <div class="p-8 bg-white rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-semibold text-center mb-6">Technical Skills</h3>
+        <div class="space-y-6">
+          {Object.entries(skillCategories).map(([category, skills]) => (
+            <div class="space-y-2">
+              <h4 class="text-lg font-semibold capitalize text-purple-600">{category}:</h4>
+              <p class="text-gray-700">{skills.join(" • ")}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Certifications Section -->
+      <div class="p-8 bg-white rounded-2xl shadow-lg relative">
+        <h3 class="text-2xl font-semibold text-center mb-6">Certifications</h3>
+        <div class="certification-carousel relative">
+          <div class="carousel-container">
+            {certifications.map((cert, index) => (
+              <div
+                class="certification-slide"
+                data-index={index}
+              >
+                <h4 class="text-xl font-semibold mb-3">{cert.title}</h4>
+                <p class="text-sm text-gray-500 mb-3">{cert.date}</p>
+                <p class="text-gray-600">{cert.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          <!-- Navigation Arrows -->
+          <button class="nav-btn prev-btn" aria-label="Previous slide">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button class="nav-btn next-btn" aria-label="Next slide">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Slide Indicators -->
+          <div class="slide-indicators">
+            {certifications.map((_, index) => (
+              <button
+                class="indicator-dot"
+                data-index={index}
+                aria-label={`Go to slide ${index + 1}`}
+              ></button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .certification-carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 0 2.5rem;
+    margin: 0 -1.5rem;
+  }
+
+  .carousel-container {
+    position: relative;
+    min-height: 280px;
+  }
+
+  .certification-slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    visibility: hidden;
+    padding: 0 1.5rem;
+  }
+
+  .certification-slide.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #4B5563;
+    z-index: 10;
+  }
+
+  .nav-btn:hover {
+    background-color: #F3F4F6;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .prev-btn {
+    left: 0;
+  }
+
+  .next-btn {
+    right: 0;
+  }
+
+  .slide-indicators {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+
+  .indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #D1D5DB;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .indicator-dot.active {
+    background-color: #6366F1;
+  }
+</style>
+
+<script>
+  function setupCarousel() {
+    const slides = document.querySelectorAll('.certification-slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const indicators = document.querySelectorAll('.indicator-dot');
+    let currentSlide = 0;
+    let slideInterval: number;
+
+    function showSlide(index: number) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+      });
+      indicators.forEach((dot) => {
+        dot.classList.remove('active');
+      });
+      
+      slides[index].classList.add('active');
+      indicators[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function goToSlide(index: number) {
+      currentSlide = index;
+      showSlide(currentSlide);
+      resetInterval();
+    }
+
+    function resetInterval() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 4000);
+    }
+
+    // Initial display
+    showSlide(currentSlide);
+
+    // Event listeners
+    prevBtn?.addEventListener('click', () => {
+      prevSlide();
+      resetInterval();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      nextSlide();
+      resetInterval();
+    });
+
+    indicators.forEach((dot, index) => {
+      dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Start auto-advance
+    slideInterval = setInterval(nextSlide, 4000);
+  }
+
+  // Setup carousel when the page loads
+  document.addEventListener('DOMContentLoaded', setupCarousel);
+</script>
