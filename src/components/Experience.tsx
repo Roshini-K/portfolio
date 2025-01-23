@@ -7,6 +7,15 @@ const Experience = () => {
   const experiences = [
     {
       type: 'work',
+      title: 'Graduate Research Assistant',
+      company: 'University at Buffalo',
+      location: 'Buffalo, NY, USA',
+      date: 'Oct. 2024 – Dec. 2024',
+      description:
+        "Analyzed the performance of Large Language Models (LLMs) (Llama 2 and ChatGPT 3.5) models integrated into Softbank Robotics' Pepper robot.  Worked on implementation of face recognition techniques, enabling the robot to identify individuals",
+    },
+    {
+      type: 'work',
       title: 'Backend Developer - Internship',
       company: 'Maverick Health',
       location: 'Buffalo, NY, USA',
@@ -15,21 +24,12 @@ const Experience = () => {
         'Engineered and developed the backend of a health platform app at Maverick Health. Implemented real-time health data tracking, educational resources, and personalized care recommendations for 1100 active users monthly.',
     },
     {
-      type: 'work',
-      title: 'Graduate Research Assistant',
-      company: 'University at Buffalo',
-      location: 'Buffalo, NY, USA',
-      date: 'Oct. 2024 – Dec. 2024',
-      description:
-        "Analyzed the performance of Large Language Models (LLMs) (Llama 2) and ChatGPT (gpt3.5) models integrated into Softbank Robotics' Pepper robot.",
-    },
-    {
       type: 'education',
       title: 'Master of Science in Computer Science',
       company: 'State University of New York at Buffalo',
       location: 'Buffalo, NY, USA',
       date: 'Jan. 2024 – May 2025',
-      description: 'Specialization in AI/ML',
+      description: 'Specialization in AI/ML\n Coursework:\n• Data Model Query Language • Data intensive computing • Intro to Machine Learning • Analysis of Algorithms • Operating systems • Computer security • Project development • Statistical data mining • Deep learning • Computer vision',
     },
     {
       type: 'work',
@@ -38,7 +38,7 @@ const Experience = () => {
       location: 'Bangalore, India',
       date: 'Jun. 2022 – Jan. 2024',
       description:
-        "• Upgraded Java Reactor projects and eliminated 95% CVEs\n• Enhanced Java servers for VA's EHR system\n• Optimized timer implementations across domains",
+        "• Upgraded Java Reactor projects to eliminate 95% CVEs\n•  Implemented JUnit test cases. Enhanced Java servers for Veterans Affairs EHR system and increased operational efficiency by 33%\n• Performed regression testing of 12 test plans across 6 domains",
     },
     {
       type: 'work',
