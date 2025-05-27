@@ -10,18 +10,18 @@ const Experience = () => {
       title: 'Graduate Research Assistant',
       company: 'University at Buffalo',
       location: 'Buffalo, NY, USA',
-      date: 'Oct. 2024 – Dec. 2024',
+      date: 'Nov. 2024 – Apr. 2024',
       description:
-        "Analyzed the performance of Large Language Models (LLMs) (Llama 2 and ChatGPT 3.5) models integrated into Softbank Robotics' Pepper robot.  Worked on implementation of face recognition techniques, enabling the robot to identify individuals",
+        "• Automated image processing by building a real time face recognition system on the Pepper robot using OpenCV, InsightFace with ArcFace embeddings. Included image pre-processing like alignment, resizing to achieve 90% accuracy. \n• Integrated and tested face recognition pipeline with state-of-the-art LLMs, OpenAI API to enable personalized human-robot interactions. Improved interaction accuracy by 60% & contextual response quality by 50%.",
     },
     {
       type: 'work',
       title: 'Backend Developer - Internship',
       company: 'Maverick Health',
       location: 'Buffalo, NY, USA',
-      date: 'Sept. 2024 – Dec. 2024',
+      date: 'Aug. 2024 – Dec. 2024',
       description:
-        'Engineered and developed the backend of a health platform app at Maverick Health. Implemented real-time health data tracking, educational resources, and personalized care recommendations for 1100 active users monthly.',
+        '• Architected 10+ interactive application prototypes & web consoles using Figma. Designed relational database schemas.\n• Implemented backend solutions using Node.js and PostgreSQL with Amazon Web Services infrastructure by provisioning EC2 and RDS instances. Built and tested RESTful APIs, JSON with Postman. \n• Streamlined a platform for 800 customer service agents, incorporating software development life cycle best practices.',
     },
     {
       type: 'education',
@@ -34,20 +34,11 @@ const Experience = () => {
     {
       type: 'work',
       title: 'Software Development Engineer 1',
-      company: 'Oracle Cerner',
+      company: 'ORACLE',
       location: 'Bangalore, India',
-      date: 'Jun. 2022 – Jan. 2024',
+      date: 'Dec. 2021 – Jan. 2024',
       description:
-        "• Upgraded Java Reactor projects to eliminate 95% CVEs\n•  Implemented JUnit test cases. Enhanced Java servers for Veterans Affairs EHR system and increased operational efficiency by 33%\n• Performed regression testing of 12 test plans across 6 domains",
-    },
-    {
-      type: 'work',
-      title: 'Software Intern',
-      company: 'Oracle Cerner',
-      location: 'Bangalore, India',
-      date: 'Dec. 2021 – Jun. 2022',
-      description:
-        'Designed JavaFX UI for CCL Script conversion, implemented JUnit tests, and managed Jenkins integrations.',
+        "• Enhanced high-performance Java reactor microservices architecture in healthcare systems using Git version control (source control management) & SVN. Reduced security vulnerabilities by 95% with Apache Maven & Gradle. \n• Resolved 75% bugs by troubleshooting and software debugging Multi-threaded applications in C#.NET Core and MVC .NET framework. Followed object-oriented programming to ensure compliance with software design patterns. \n• Implemented Java servers, JavaFX UI, JUnit test cases as part of Task Order52 (TO52) initiative for the U.S. Dept. of Veterans Affairs, resulting in 33% improvement in operational efficiency of Electronic Health Records. \n• Executed unit testing, regression/sanity testing using Selenium and test automation of 25+ test plans across 6 CI/CD pipelines in Jenkins. Analyzed the build process using PowerBI, data visualization & Excel. \n• Facilitated 25+ successful software releases into production by coordinating across development, QA, and operations teams, ensuring zero critical incidents post-deployment and maintaining 99% system uptime, demonstrating reliability. \n• Spearheaded end-to-end 50+ design reviews, code reviews, real-time programming, improved code quality, and technical documentation while adhering to Agile methodologies, JIRA, Scrum & coding standard practices.",
     },
     {
       type: 'education',
